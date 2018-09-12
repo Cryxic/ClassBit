@@ -21,7 +21,11 @@ module.exports = function () {
         },
         price: {
             field: 'price',
-            type: DataTypes.FLOAT
+            type: DataTypes.NUMERIC
+        },
+        description: {
+            field: 'description',
+            type: DataTypes.STRING
         }
     }, {
             freezeTableName: true,

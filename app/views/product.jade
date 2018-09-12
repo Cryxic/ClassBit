@@ -9,19 +9,20 @@ body
           .row
               .col-lg-9
               ul.nav.nav-pills.nav-pills-info.flex-column
-                  li.nav-item
-                  a.nav-link.active(href='#') Category 1
-                  li.nav-item
-                  a.nav-link(href='#') Category 2
-                  li.nav-item
-                  a.nav-link(href='#') Category 3 
+                li.nav-item
+                  a.nav-link.active(href='#') Клас
+                li.nav-item
+                  a.nav-link(href='#') Предмет
+                li.nav-item
+                  a.nav-link(href='#') Вид подготовка 
         // /.col-lg-3
         .col-lg-9
           .card.mt-4
             img.card-img-top(src=`/photos/${book.book.imageLink}`, alt='Card image cap')
             .card-body
+              h5 #{book.price} лв.
               p.card-text
-                | #{book.book.description}
+                | #{book.description}
           br
           // /.card
           .card.card-nav-tabs
