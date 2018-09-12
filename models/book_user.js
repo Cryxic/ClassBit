@@ -18,6 +18,10 @@ module.exports = function () {
         userId: {
             field: 'user_id',
             type: DataTypes.INTEGER
+        },
+        price: {
+            field: 'price',
+            type: DataTypes.FLOAT
         }
     }, {
             freezeTableName: true,

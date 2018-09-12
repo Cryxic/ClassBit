@@ -1,0 +1,44 @@
+extends layout
+body
+  block content
+    include navbar
+    .container
+      .row
+        .col-lg-3
+          h1.my-4 ClassBit
+          .row
+              .col-lg-9
+              ul.nav.nav-pills.nav-pills-info.flex-column
+                  li.nav-item
+                  a.nav-link.active(href='#') Category 1
+                  li.nav-item
+                  a.nav-link(href='#') Category 2
+                  li.nav-item
+                  a.nav-link(href='#') Category 3 
+        // /.col-lg-3
+        .col-lg-9
+          .card.mt-4
+            img.card-img-top(src=`/photos/${book.book.imageLink}`, alt='Card image cap')
+            .card-body
+              p.card-text
+                | #{book.book.description}
+          br
+          // /.card
+          .card.card-nav-tabs
+            .card-header.card-header-info
+              | Comments
+            .card-body
+              h4.card-title Comment title
+              p.card-text Lorem ipsum dolor sit amet.
+              p.text-right Author       
+          // /.container
+          // Footer
+          footer.py-5.bg-dark
+              .container
+                p.m-0.text-center.text-white © ClassBit 2018
+              // /.container
+              // Core JavaScript Files
+              script(src='js/jquery.min.js', type='text/javascript')
+              script(src='js/popper.min.js', type='text/javascript')
+              script(src='js/bootstrap-material-design.min.js', type='text/javascript')
+              script(src='js/material-kit.min.js', type='text/javascript')
