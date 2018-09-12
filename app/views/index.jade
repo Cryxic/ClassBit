@@ -10,11 +10,11 @@ body
             .col-lg-9
               ul.nav.nav-pills.nav-pills-info.flex-column
                 li.nav-item
-                  a.nav-link.active(href='#') Category 1
+                  a.nav-link.active(href='#') Клас
                 li.nav-item
-                  a.nav-link(href='#') Category 2
+                  a.nav-link(href='#') Предмет
                 li.nav-item
-                  a.nav-link(href='#') Category 3
+                  a.nav-link(href='#') Вид подготовка
         .col-lg-9
           #carouselExampleIndicators.carousel.slide.my-4(data-ride='carousel')
             ol.carousel-indicators
@@ -35,7 +35,7 @@ body
               span.carousel-control-next-icon(aria-hidden='true')
               span.sr-only Next
           .row
-            for d in data
+            for d in books
               .col-lg-4.col-md-6.mb-4
                 .card.h-100
                   a(href=`/product?id=${d.id}`)
@@ -45,7 +45,7 @@ body
                       a(href='#') #{d.book.name}
                     h5 #{d.price} лв.
                     p.card-text
-                      | #{d.book.description}
+                      | #{d.description}
                   .card-footer
                     small.text-muted ★ ★ ★ ★ ☆
           br
