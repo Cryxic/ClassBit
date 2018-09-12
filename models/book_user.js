@@ -5,28 +5,25 @@ const sequelize = require('../db');
 
 module.exports = function () {
 
-    const user = sequelize.define('user', {
+    const bookUser = sequelize.define('book_user', {
         id: {
             field: 'id',
             type: DataTypes.INTEGER,
             primaryKey: true
         },
-        hash: {
-            field: 'hash',
-            type: DataTypes.STRING
+        bookId: {
+            field: 'book_id',
+            type: DataTypes.INTEGER
         },
-        salt: {
-            field: 'salt',
-            type: DataTypes.STRING
-        },
-        username: {
-            field: 'username',
-            type: DataTypes.STRING
+        userId: {
+            field: 'user_id',
+            type: DataTypes.INTEGER
         }
     }, {
             freezeTableName: true,
             timestamps: false
 
         });
-    return user;
+
+    return bookUser;
 }
