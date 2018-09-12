@@ -4,8 +4,8 @@ const http = require ('http');
 const app = express();
 const PORT = 3000;
 
-require ('../config/router') (app);
-require('../db');
+require ('./config/router') (app);
+require('./db');
 
 app.set('port', PORT);
 app.set('view engine', 'jade');

@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = function(app) {
-    app.use('/', require('../routers/index'));
+    app.use('/', require('../app/routers/index'));
 }
